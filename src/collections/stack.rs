@@ -5,9 +5,19 @@ pub struct Stack<T> {
 }
 
 impl<T> Stack<T> {
+    /// Returns whether the stack is empty
+    pub fn is_empty(&self) -> bool {
+        self.len() == 0
+    }
+
     /// Creates a new stack
     pub fn new() -> Self {
         Self { items: vec![] }
+    }
+
+    /// Returns the length of the stack
+    pub fn len(&self) -> usize {
+        self.items.len()
     }
 
     /// Pushes an item onto the stack
@@ -21,10 +31,10 @@ impl<T> Stack<T> {
     }
 
     /// Peeks at the top item of the stack
-    pub fn peek(&self) -> Option<&T>{
-        if self.items.is_empty(){
-            return None
-        } else{
+    pub fn peek(&self) -> Option<&T> {
+        if self.items.is_empty() {
+            return None;
+        } else {
             Some(&self.items[self.items.len() - 1])
         }
     }
