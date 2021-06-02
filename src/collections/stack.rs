@@ -10,6 +10,11 @@ impl<T> Stack<T> {
         self.len() == 0
     }
 
+    /// Clears the stack of all items.
+    pub fn clear(&mut self) {
+        self.items.clear();
+    }
+
     /// Creates a new stack
     pub fn new() -> Self {
         Self { items: vec![] }
