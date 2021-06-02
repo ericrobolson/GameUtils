@@ -1,4 +1,4 @@
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 /// Creates a new Queue
 pub struct Queue<T>
 where

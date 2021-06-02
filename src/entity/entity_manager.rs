@@ -4,7 +4,7 @@ use crate::collections::Queue;
 
 const MINIMUM_FREE_INDICES: usize = 1024;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 /// Class that manages creating and deletion of entities.
 pub struct EntityManager {
     generations: Vec<Generation>,
