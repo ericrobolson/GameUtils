@@ -14,7 +14,7 @@ const ENTITY_INDEX_MASK: EntityId = !ENTITY_GENERATION_MASK;
 const ENTITY_GENERATION_MASK: EntityId = 0b0000_0000_0000_0000_0000_0000_0000_1111_1111;
 
 /// An entity in the system.
-#[derive(Copy, Clone, PartialEq)]
+#[derive(Copy, Clone, Eq, std::hash::Hash, PartialEq)]
 pub struct Entity {
     entity: EntityId,
 }
