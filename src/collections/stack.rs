@@ -1,5 +1,5 @@
 /// Stack data structure
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct Stack<T> {
     items: Vec<T>,
 }
